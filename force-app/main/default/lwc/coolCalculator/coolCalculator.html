@@ -1,0 +1,16 @@
+<template>
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-input type="number" label="Escribe un numero" value={firstOperand} onchange={handleFirstOperand}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="2">
+            <lightning-icon icon-name="utility:add" alternative-text="Approved" title="Approved"></lightning-icon>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-input type="number" label="Escribe un numero" value={secondOperand} onchange={handleSecondOperand}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="2">
+            {result}
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
