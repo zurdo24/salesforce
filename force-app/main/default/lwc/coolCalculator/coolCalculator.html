@@ -1,16 +1,136 @@
 <template>
-    <lightning-layout multiple-rows="true">
-        <lightning-layout-item padding="around-small" size="4">
-            <lightning-input type="number" label="Escribe un numero" value={firstOperand} onchange={handleFirstOperand}></lightning-input>
-        </lightning-layout-item>
-        <lightning-layout-item padding="around-small" size="2">
-            <lightning-icon icon-name="utility:add" alternative-text="Approved" title="Approved"></lightning-icon>
-        </lightning-layout-item>
-        <lightning-layout-item padding="around-small" size="4">
-            <lightning-input type="number" label="Escribe un numero" value={secondOperand} onchange={handleSecondOperand}></lightning-input>
-        </lightning-layout-item>
-        <lightning-layout-item padding="around-small" size="2">
-            {result}
-        </lightning-layout-item>
-    </lightning-layout>
+    <lightning-card class="card-size">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item padding="around-small " size="12">
+                <lightning-textarea
+                    value="{dataEntereds}"
+                    read-only
+                ></lightning-textarea>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small " size="12">
+                <lightning-button
+                    variant="destructive"
+                    onclick={handleClickClear}
+                    label="AC"
+                ></lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="7"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="8"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="9"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="brand"
+                    onclick={handleClickOperator}
+                    label="/"
+                ></lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="4"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="5"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="6"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="brand"
+                    onclick={handleClickOperator}
+                    label="x"
+                ></lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="1"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="2"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="3"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="brand"
+                    onclick={handleClickOperator}
+                    label="-"
+                ></lightning-button>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="0"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="success"
+                    onclick={handleClickOperand}
+                    label="."
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="destructive"
+                    onclick={resultado}
+                    label="="
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="3">
+                <lightning-button
+                    variant="brand"
+                    onclick={handleClickOperator}
+                    label="+"
+                ></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
 </template>
